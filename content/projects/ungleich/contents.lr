@@ -1,0 +1,81 @@
+_model: work
+---
+title: @ungleich (Remote, ~1020 Hours Worked, 158 on Upwork and rest offsite)
+---
+name: ungleich
+---
+projects:
+
+### uncloud (Open Source Cloud Management Software)
+
+* Aims to provide an alternative to OpenNebula and OpenStack
+* Open Source
+* Easy to setup, hack and extend
+* Distributed - No single point of failure
+* IPv6 First
+* Payment Module builtin
+
+**Technologies used**
+
+* **Programming Language:** Python 3
+* **Web Framework:** Flask (for APIs)
+* **Key/Value Store:** etcd (Distributed Key/Value store used for multiple purpose e.g task queues, metadata storage)
+* **Image/VM Storage Platform** ceph (Distributed Storage Platform)
+
+**Interesting modules that can be used separately**
+* [uncloud-vmm](https://code.ungleich.ch/uncloud/uncloud/blob/master/uncloud/vmm/__init__.py) - A nice little Python wrapper for QEMU much better than the one found in QEMU's own repository. Also, supports migration of VMs.
+* [schemas](https://code.ungleich.ch/ahmedbilal/ungleich-common/blob/master/schemas/ungleich_common/schemas/schemas.py) - A very nice and very little JSON validation module. To see it in action, checkout `uncloud-pay v1` code.
+
+
+Check the project at https://ungleich.ch/en-us/cms/blog/2019/06/24/lets-challenge-openstack-and-opennebula/
+
+
+### LDAP integration into [dynamicweb](https://code.ungleich.ch/ungleich-public/dynamicweb) (ungleich's CMS)
+The purpose of this task is to ensure each user in dynamicweb (a django app) have LDAP entry or equivalent user entry in LDAP along with the one currently in database. See Merge Request at https://code.ungleich.ch/ungleich-public/dynamicweb/merge_requests/722 for more details.
+
+
+### uncloud-pay v1
+A generic product/payment service integrated with `Stripe` that allows to create products from JSON files. End user can buy products or subscribe to some subscription using simple `cli`. To see code visit https://code.ungleich.ch/ahmedbilal/meow-pay/tree/e4f2f446f5db7c92de373f3b717963d809f1b11f/meow-payv1.
+
+
+### ungleich-vpn
+A service that manages wireguard configuration i.e create/delete VPN entry in wireguard configuration.
+
+* **Web Framework:** Flask
+
+Check the project at https://code.ungleich.ch/ahmedbilal/ungleich-vpn
+
+
+### vm-cli-services [internal]
+A simple API that is used to perform simple actions e.g start, stop, suspend etc as well as snapshot management for OpenNebula VMs by utilizing OpenNebula XML RPC.
+
+---
+website: https://ungleich.ch/
+---
+date: 2020-03-11
+---
+installations:
+
+**Note:** The following are all production level setup i.e Creating cdist type, HTTPs (using Let's Encrypt), Firewall (although I didn't do it myself), Regular Backups etc.
+
+* [netbox](https://github.com/netbox-community/netbox) with LDAP integration at https://netbox.ungleich.ch/ (Alpine Linux).
+* [django-survey-report](https://github.com/Pierre-Sassoulas/django-survey) at https://survey.ungleich.ch/ (Alpine Linux).
+* [mailman](https://www.list.org/) at https://post.ungleich.ch. It has cdist type already but have few issues in it (Debian 10).
+* [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/) and [blackbox-exporter](https://github.com/prometheus/blackbox_exporter) at https://monitoring.place11.ungleich.ch. cdist types exists for them but have few issues (Debian 10). Also, created a simple dashboard in grafana that depicts the uptime of various ungleich's services.
+* [YaCy](https://yacy.net/) at https://search.ungleich.ch (Alpine Linux)
+* [etcd](https://etcd.io/) 3 node setup at https://etcd1.ungleich.ch, https://etcd2.ungleich.ch and https://etcd3.ungleich.ch (Alpine Linux)
+* [WireGuard server](https://www.wireguard.com/) server at offsite VPS server. (Debian)
+
+---
+opensource_contributions:
+
+* Added init service for rdnssd in ndisc6 package. More details at https://github.com/alpinelinux/aports/pull/10470
+* Created a repo containing QEMU compiled with RBD support (Alpine Linux) https://code.ungleich.ch/ahmedbilal/qemu-with-rbd-alpine. Although, couldn't be able to propose patch to Alpine Linux upstream as QEMU was in `community` repository and ceph was in `extras` at that time as far as I remember.
+* Added missing tags that are neccessary to show snapshots information in `one.vmpool.infoextended` command in OpenNebula's pyone library. See related issue at https://github.com/OpenNebula/one/issues/4136
+---
+description:
+
+Worked as Python Hacker, Web Developer and DevOps (A little bit)
+>**Review:**  Amazing guy, highly recommended!
+
+>**Rating:** 5.0

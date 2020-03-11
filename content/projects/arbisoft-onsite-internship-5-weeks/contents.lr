@@ -1,0 +1,53 @@
+_model: work
+---
+title: @ arbisoft (Onsite, internship, 5 weeks)
+---
+body:
+
+## Projects
+
+### Code Paste Website
+
+Simple code paste website with code highlighter. Check out the project at https://github.com/ahmedbilal/flask_tutorial.
+
+* **Web Framework:** Flask
+* **Database:** SQLite 3
+* **ORM:** SQLAlchemy
+* **CSS Framework:** Spectre
+* **Code Highlighter:** highlight.js
+
+### BBC Scraper and API
+
+Scraps BBC news articles and provide an API to easily access them. Check out the project at https://github.com/ahmedbilal/scrapy_django_project
+
+* **Scraping Framework:** Scrapy
+* **Web Framework:** Django Rest Framework
+
+---
+date: 2020-03-11
+---
+description: 
+---
+name: Arbisoft Onsite Internship 5 Weeks
+---
+website: https://arbisoft.com/
+---
+projects:
+
+### Code Paste Website
+
+Simple code paste website with code highlighter. Check out the project at https://github.com/ahmedbilal/flask_tutorial.
+
+* **Web Framework:** Flask
+* **Database:** SQLite 3
+* **ORM:** SQLAlchemy
+* **CSS Framework:** Spectre
+* **Code Highlighter:** highlight.js
+
+### BBC Scraper and API
+
+Scraps BBC news articles and provide an API to easily access them. Check out the project at https://github.com/ahmedbilal/scrapy_django_project
+
+* **Scraping Framework:** Scrapy
+* **Web Framework:** Django Rest Framework
+
