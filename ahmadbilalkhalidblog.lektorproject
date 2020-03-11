@@ -1,5 +1,0 @@
-[project]
-name = Ahmad Bilal Khalid's blog
-
-[servers.ghpages]
-target = ghpages://ahmedbilal/ahmedbilal.github.io
